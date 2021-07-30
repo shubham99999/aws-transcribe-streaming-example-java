@@ -56,7 +56,7 @@ public class TranscribeStreamingSynchronousClient {
             StartStreamTranscriptionRequest request = StartStreamTranscriptionRequest.builder()
                     .languageCode(LanguageCode.EN_US.toString())
                     .mediaEncoding(MediaEncoding.PCM)
-                    .mediaSampleRateHertz(sampleRate)
+                    .mediaSampleRateHertz(8000)
                     .build();
             AudioStreamPublisher audioStream = new AudioStreamPublisher(new FileInputStream(audioFile));
             StartStreamTranscriptionResponseHandler responseHandler = getResponseHandler();
